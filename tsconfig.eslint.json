@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es2021"],
+    "skipLibCheck": true,
+    "strict": true
+  }
+}

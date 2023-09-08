@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "lib": ["es2021"],
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es2020",
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  }
+}

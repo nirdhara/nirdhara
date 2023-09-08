@@ -1,0 +1,8 @@
+{
+  "extends": "../../configs/tsconfig/tsconfig.nest-base",
+  "compilerOptions": {
+    "lib": ["es2021"],
+    "composite": true
+  },
+  "references": [{ "path": "../common" }]
+}

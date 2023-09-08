@@ -1,0 +1,30 @@
+{
+  "folders": [
+    {
+      "name": "💡 nirdhara",
+      "path": "."
+    },
+    {
+      "name": "🚀 composer-api",
+      "path": "apps/composer-api"
+    },
+    {
+      "name": "🚀 composer-ui",
+      "path": "apps/composer-ui"
+    },
+    {
+      "name": "📦 common",
+      "path": "libs/common"
+    },
+    {
+      "name": "📦 common-nest",
+      "path": "libs/common-nest"
+    },
+  ],
+  "settings": {
+    "files.exclude": {
+      "apps/**": true,
+      "libs/**": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@app/common",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint src/**/*.ts --fix",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  },
+  "dependencies": {
+    "await-to-js": "^3.0.0"
+  }
+}
