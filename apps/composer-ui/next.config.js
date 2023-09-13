@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+
+const buidTime = Date.now();
+const nextConfig = {
+  env: {
+    buildTime: buidTime,
+  },
+};
 
 module.exports = nextConfig;
