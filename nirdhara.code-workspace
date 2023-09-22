@@ -13,6 +13,10 @@
       "path": "apps/composer-ui"
     },
     {
+      "name": "🚀 evaluator-api",
+      "path": "apps/evaluator-api"
+    },
+    {
       "name": "📦 common",
       "path": "libs/common"
     },
