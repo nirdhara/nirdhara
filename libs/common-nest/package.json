@@ -15,8 +15,8 @@
     "@nestjs/core": "^10.2.6",
     "@nestjs/platform-fastify": "^10.2.6",
     "@nestjs/swagger": "^7.1.12",
-    "@sentry/node": "^7.70.0",
-    "@sentry/tracing": "^7.70.0",
+    "@sentry/node": "^7.71.0",
+    "@sentry/tracing": "^7.71.0",
     "axios": "1.5.0",
     "fastify": "^4.23.2",
     "helmet": "^7.0.0",
@@ -29,7 +29,7 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "eslint": "^8.49.0",
+    "eslint": "^8.50.0",
     "pino-pretty": "^10.2.0"
   }
 }
