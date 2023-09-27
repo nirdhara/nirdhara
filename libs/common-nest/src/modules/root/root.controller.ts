@@ -4,6 +4,9 @@ import { ApiOperation, ApiProperty, ApiResponse, ApiTags } from '@nestjs/swagger
 declare const __GIT_VERSION__: string;
 declare const __BUILD_TIME__: number;
 
+/**
+ * Represents build information for the application.
+ */
 class BuildInfo {
   @ApiProperty({
     example: '123456a/1693424403000',
@@ -12,6 +15,11 @@ class BuildInfo {
   readonly build: string;
 }
 
+/**
+ * Controller for the root endpoint of the API service.
+ * @remarks
+ * This controller is used to fetch git version and build time, which can be used to check the health of the API service.
+ */
 @ApiTags('Root')
 @Controller()
 export class RootController {

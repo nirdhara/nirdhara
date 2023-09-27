@@ -6,10 +6,12 @@ const logger = new Logger('Error');
 
 /**
  * Handles non axios errors and axios error without response.
- *
- * @param param.error Original error caught
- * @param param.ex Exception to return when service is not reachable.
- * @returns
+ * Handles HTTP errors and returns a Promise that either rejects with an HttpException or resolves with void.
+ * @param error - Original error caught
+ * @param ex - The HttpException to return if service is not reachable.
+ * @param ex401 - The HttpException to return if the error is an unauthorized error.
+ * @param ex404 - The HttpException to return if the error is a not found error.
+ * @returns A Promise that either rejects with an HttpException or resolves with void.
  */
 export const httpErrorHandler = ({
   error,
