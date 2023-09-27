@@ -2,11 +2,20 @@ import { ArgumentsHost, Catch, ExceptionFilter, HttpException, HttpStatus, Logge
 import type { FastifyReply } from 'fastify';
 import { ErrorCode } from '../exceptions/error-code.enum';
 
+/**
+ * Catches all unhandled exceptions thrown by the application and sends an appropriate response to the client.
+ */
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
   // Logger
   private readonly logger = new Logger(AllExceptionsFilter.name);
 
+  /**
+   * Catches the exception and sends an appropriate response to the client.
+   * @param exception The exception that was thrown.
+   * @param host The arguments host.
+   * @returns The response to send to the client.
+   */
   catch(exception: Error, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
     const response: FastifyReply = ctx.getResponse();

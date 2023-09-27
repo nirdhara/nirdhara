@@ -1,6 +1,11 @@
 import Joi from 'joi';
 import { HttpApiSettings } from './types';
 
+/**
+ * Defines the schema for the HTTP API configuration.
+ * @param port - The port number for the HTTP API.
+ * @returns An object containing the validation schema for the HTTP API settings.
+ */
 export const httpApiConfigSchema = ({
   port,
 }: Readonly<{

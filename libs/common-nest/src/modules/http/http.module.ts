@@ -15,6 +15,10 @@ const instance = hyperid();
 
 const base64Encode = (s: Record<string, any>) => (s ? Buffer.from(JSON.stringify(s)).toString('base64') : s);
 
+/**
+ * Base abstract class for HTTP modules that implements `OnModuleInit` and `OnModuleDestroy` lifecycle hooks.
+ * Provides request and response interceptors to log requests and responses.
+ */
 export abstract class BaseHttpModule implements OnModuleInit, OnModuleDestroy {
   // Interceptor Ids.
   requestInterceptor: number;
@@ -26,6 +30,10 @@ export abstract class BaseHttpModule implements OnModuleInit, OnModuleDestroy {
     @Optional() private readonly ac: AsyncContext<string, string>,
   ) {}
 
+  /**
+   * Lifecycle hook, called once the module has been initialized.
+   * Adds request and response interceptors to log requests.
+   */
   public onModuleInit(): void {
     // Add request interceptor and response interceptor to log requests
     const axios = this.httpService.axiosRef;
@@ -120,6 +128,9 @@ export abstract class BaseHttpModule implements OnModuleInit, OnModuleDestroy {
     );
   }
 
+  /**
+   * Called when the HttpModule is destroyed. Ejects the request and response interceptors.
+   */
   public onModuleDestroy() {
     // Eject request and response interceptors.
     const axios = this.httpService.axiosRef;
@@ -128,6 +139,11 @@ export abstract class BaseHttpModule implements OnModuleInit, OnModuleDestroy {
   }
 }
 
+/**
+ * Returns an object containing the ID of the request and the response time in milliseconds.
+ * @param config - The Axios request configuration object.
+ * @returns An object containing the ID of the request and the response time in milliseconds.
+ */
 const responseLog = <T>(config: AxiosRequestConfig<T>) => ({
   id: config['metadata'].id,
   responseTime: Number(process.hrtime.bigint() - config['metadata'].startTime) / 1_000_000,

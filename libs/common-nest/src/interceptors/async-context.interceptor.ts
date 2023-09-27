@@ -3,6 +3,12 @@ import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nes
 import { Observable } from 'rxjs';
 import { Header } from '../enums/header.enum';
 
+/**
+ * Intercepts incoming requests and sets request-based values to be accessed throughout the application.
+ * @param context The execution context.
+ * @param next The call handler.
+ * @returns An observable of the response.
+ */
 @Injectable()
 export class AsyncContextInterceptor implements NestInterceptor {
   constructor(private readonly ac: AsyncContext<string, any>) {}

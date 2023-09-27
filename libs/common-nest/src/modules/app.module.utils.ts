@@ -5,7 +5,15 @@ import { loggerParams } from '../config/logger.config';
 
 declare const __PRODUCTION__: boolean;
 
-// Custom validate function to mutate config before validation.
+/**
+ * Custom validate function to mutate config before validation.
+ * Validates a configuration object against a given schema and keys.
+ *
+ * @param configSchema - The schema to validate the configuration object against.
+ * @param keys - The keys to mutate in the configuration object.
+ * @returns A function that takes a configuration object and returns the validated configuration object.
+ * @throws An error if the configuration object fails validation.
+ */
 export const configValidate =
   ({ configSchema, keys }: Readonly<{ configSchema: Record<string, Joi.AnySchema>; keys: string[] }>) =>
   (config: Record<string, unknown>) => {
@@ -31,6 +39,13 @@ export const configValidate =
     return config;
   };
 
+/**
+ * Configures the NestJS ConfigModule with the provided options.
+ * @param envSuffix The suffix to use for the environment file (e.g. 'production', 'test', etc.).
+ * @param configSchema (Optional) A schema to validate the configuration against.
+ * @param validate (Optional) A function to validate the configuration.
+ * @returns The configured ConfigModule.
+ */
 export const configModule = ({
   envSuffix,
   configSchema,
@@ -59,6 +74,11 @@ export const configModule = ({
  *
  * @param param.name Application name
  * @returns
+ */
+/**
+ * Returns a LoggerModule configuration object with the specified name.
+ * @param name - The name of the logger.
+ * @returns A LoggerModule configuration object.
  */
 export const loggerModule = ({ name }: Readonly<{ name: string }>) =>
   LoggerModule.forRootAsync({

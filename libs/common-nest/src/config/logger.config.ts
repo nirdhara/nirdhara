@@ -29,6 +29,12 @@ const pinoOptions = (args: PinoOption): pino.LoggerOptions => ({
 
 export const pinoLogger = (args: PinoOption) => pino(pinoOptions(args));
 
+/**
+ * Returns a function that takes a `ConfigService` instance and returns a `Params` object
+ * for configuring the `pinoHttp` middleware for all routes.
+ * @param args - An object containing options for configuring the `pinoHttp` middleware.
+ * @returns A function that takes a `ConfigService` instance and returns a `Params` object.
+ */
 export const loggerParams =
   (args: PinoOption) =>
   (config: ConfigService<AppSettings>): Params => ({

@@ -57,11 +57,17 @@ export interface FactoryArgs {
   readonly customBootstrap?: (app: NestFastifyApplication) => void;
 }
 
+/**
+ * Bootstraps a NestJS HTTP application using FastifyAdapter and sets up global middleware, interceptors, filters, and pipes.
+ * @param args - The factory arguments containing the NestJS module, application name, and other optional configurations.
+ * @returns A Promise that resolves when the application is successfully started and listening for incoming requests.
+ */
 export const nestHttpAppBootstrap = async (args: FactoryArgs) => {
-  // Unique id generator instance.
+  // Generates a unique request ID using hyperid library.
   const genReqId = hyperid();
 
   // https://docs.nestjs.com/techniques/performance#adapter
+  // Create a Fastify instance with logger and request ID header
   const fastifyInstance = fastify({
     // https://www.fastify.io/docs/latest/Reference/Logging/
     // Additional fields can be added using req/res serializer
@@ -70,9 +76,12 @@ export const nestHttpAppBootstrap = async (args: FactoryArgs) => {
     genReqId,
   });
 
+  // Create a FastifyAdapter with the Fastify instance
   const fastifyAdapter = new FastifyAdapter(fastifyInstance as any);
+  // Create a NestJS application with the FastifyAdapter
   const app = await NestFactory.create<NestFastifyApplication>(args.module, fastifyAdapter, { bufferLogs: true });
 
+  // Enable CORS if not in production or if explicitly requested
   if (!__PRODUCTION__ || args.cors) {
     app.enableCors();
   }
@@ -85,7 +94,7 @@ export const nestHttpAppBootstrap = async (args: FactoryArgs) => {
   // Applies security hardening settings. using defaults: https://www.npmjs.com/package/helmet
   app.register(fastifyHelmet as any, helmetOptions() as any); // TODO: any is added because of mismatch of types.
 
-  // Global middleware, interceptors, filters, pipes
+  // Set up global middleware, interceptors, filters, and pipes
   if (__PRODUCTION__) {
     app.use(Handlers.requestHandler()); // The request handler must be the first middleware on the app
   }
@@ -97,11 +106,13 @@ export const nestHttpAppBootstrap = async (args: FactoryArgs) => {
 
   const config: ConfigService<HttpApiSettings> = app.get(ConfigService);
 
+  // Initialize Sentry if in production and set up SentryInterceptor
   if (__PRODUCTION__) {
     sentryInit(config, args.name);
     app.useGlobalInterceptors(new SentryInterceptor());
   }
 
+  // Set up Swagger documentation if requested
   if (__OPEN_API__) {
     const options = new DocumentBuilder()
       .setTitle(args.name)
@@ -124,6 +135,7 @@ export const nestHttpAppBootstrap = async (args: FactoryArgs) => {
     SwaggerModule.setup('openapi', app, document);
   }
 
+  // Get the port from the configuration and start listening for incoming requests
   const port = +config.get<number>('APP_PORT');
 
   // Starts listening for shutdown hooks
@@ -137,6 +149,7 @@ export const nestHttpAppBootstrap = async (args: FactoryArgs) => {
   // https://docs.nestjs.com/techniques/performance#adapter
   await app.listen(port, '0.0.0.0');
 
+  // Enable hot module replacement if not in production and module.hot is available
   // https://docs.nestjs.com/recipes/hot-reload#hot-module-replacement
   if (!__PRODUCTION__ && module.hot) {
     module.hot.accept();

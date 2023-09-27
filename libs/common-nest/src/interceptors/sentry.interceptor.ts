@@ -6,6 +6,9 @@ import { catchError, tap } from 'rxjs/operators';
 // This is a workaround; see https://github.com/getsentry/sentry-javascript/issues/4731
 import '@sentry/tracing';
 
+/**
+ * Interceptor that integrates with Sentry to capture errors and create transactions.
+ */
 @Injectable()
 export class SentryInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
