@@ -1,9 +1,9 @@
 import { RootModule } from '@app/common-nest/src';
 import { Module } from '@nestjs/common';
-import { LlmModule } from './llm/llm.module';
+import { ApiProviderModule } from './api-provider/api-provider.module';
 
 @Module({
-  imports: [RootModule, LlmModule],
+  imports: [RootModule, ApiProviderModule],
   providers: [],
 })
 export class DomainModule {}

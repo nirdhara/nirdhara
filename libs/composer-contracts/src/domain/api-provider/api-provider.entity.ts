@@ -1,19 +1,19 @@
 import { ApiProperty, IsEnum, IsString } from '../../decorators';
-import { LlmProvider } from './llm-provider.enum';
+import { ApiProvider } from './api-provider.enum';
 
 export class AddApiKeyForm {
   @ApiProperty({
-    enum: LlmProvider,
-    example: LlmProvider.OpenAi,
-    description: 'Large Language Model Provider like OpenAI, Google PaLM',
+    enum: ApiProvider,
+    example: ApiProvider.OpenAi,
+    description: 'Large Language Model and other API Provider like OpenAI, Google PaLM, SerpAPI',
   })
-  @IsEnum(LlmProvider)
-  provider!: LlmProvider;
+  @IsEnum(ApiProvider)
+  provider!: ApiProvider;
 
   @ApiProperty({
     type: String,
     example: 'api_key_2qeDowe8Ns_sample',
-    description: 'API Key from a Large Language Model Provider',
+    description: 'API Key from a Large Language Model or other API Provider',
   })
   @IsString()
   readonly apiKey!: string;

@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
-import { LlmController } from './llm.controller';
 import { GooglePalmModule } from 'src/modules/core/google-palm/google-palm.module';
-import { LlmService } from './llm.service';
 import { OpenAiModule } from 'src/modules/core/open-ai/open-ai.module';
+import { ApiProviderController } from './api-provider.controller';
+import { ApiProviderService } from './api-provider.service';
 
 @Module({
   imports: [GooglePalmModule, OpenAiModule],
-  providers: [LlmService],
-  controllers: [LlmController],
+  providers: [ApiProviderService],
+  controllers: [ApiProviderController],
 })
-export class LlmModule {}
+export class ApiProviderModule {}
