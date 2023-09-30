@@ -1,11 +1,11 @@
 import { httpErrorHandler } from '@app/common-nest/src';
+import { ErrorCode } from '@app/composer-contracts/src/exceptions/error-code.enum';
 import { HttpException } from '@nestjs/common';
 import { AxiosError } from 'axios';
-import { ErrorCode } from 'src/exceptions/error-code.enum';
 import { GooglePalmErrorResponse } from './google-palm.dto';
 import {
   GooglePalmConnectionException,
-  GooglePalmInvalidApiKeyException,
+  GooglePalmIncorrectApiKeyException,
 } from './google-palm.exception';
 
 export const errorToPromise = async (
@@ -21,7 +21,7 @@ export const errorToPromise = async (
 
   const response = (error.response.data as GooglePalmErrorResponse)?.error;
   if (response?.details.find((detail) => detail.reason === 'API_KEY_INVALID')) {
-    return Promise.reject(new GooglePalmInvalidApiKeyException());
+    return Promise.reject(new GooglePalmIncorrectApiKeyException());
   }
 
   const exception = new HttpException(

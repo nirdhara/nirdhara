@@ -9,6 +9,10 @@
       "path": "apps/composer-api"
     },
     {
+      "name": "📦 composer-contracts",
+      "path": "libs/composer-contracts"
+    },
+    {
       "name": "🚀 composer-ui",
       "path": "apps/composer-ui"
     },

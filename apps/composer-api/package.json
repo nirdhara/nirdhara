@@ -14,7 +14,9 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@app/common": "workspace:*",
     "@app/common-nest": "workspace:*",
+    "@app/composer-contracts": "workspace:*",
     "@fastify/static": "^6.11.2",
     "@nestjs/axios": "^3.0.0",
     "@nestjs/common": "^10.2.6",
@@ -25,6 +27,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "joi": "^17.10.2",
+    "openai": "^4.11.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
