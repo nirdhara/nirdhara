@@ -1,15 +1,15 @@
-import { LlmProvider } from '@app/composer-contracts/src/domain/llm/llm-provider.enum';
 import {
   AddApiKeyForm,
   AddApiKeyResult,
-} from '@app/composer-contracts/src/domain/llm/llm.entity';
+} from '@app/composer-contracts/src/domain/api-provider/api-provider.entity';
+import { ApiProvider } from '@app/composer-contracts/src/domain/api-provider/api-provider.enum';
 import { Injectable, UnprocessableEntityException } from '@nestjs/common';
 import { Observable, from, map, throwError } from 'rxjs';
 import { GooglePalmService } from 'src/modules/core/google-palm/google-palm.service';
 import { OpenAiService } from 'src/modules/core/open-ai/open-ai.service';
 
 @Injectable()
-export class LlmService {
+export class ApiProviderService {
   constructor(
     private readonly openAiService: OpenAiService,
     private readonly googlePalmService: GooglePalmService,
@@ -25,6 +25,12 @@ export class LlmService {
     );
   }
 
+  /**
+   * Verifies the API key based on the provider.
+   * @param form - The form containing the API key and provider information.
+   * @returns An observable that emits the verification result.
+   * @throws An UnprocessableEntityException if the provider is invalid.
+   */
   private verifyApiKey({
     form,
   }: Readonly<{
@@ -32,11 +38,11 @@ export class LlmService {
   }>): Observable<Record<string, any>> {
     const { apiKey } = form;
 
-    if (form.provider === LlmProvider.OpenAi) {
+    if (form.provider === ApiProvider.OpenAi) {
       return from(this.openAiService.verifyApiKey({ apiKey }));
     }
 
-    if (form.provider === LlmProvider.GooglePalm) {
+    if (form.provider === ApiProvider.GooglePalm) {
       return this.googlePalmService.verifyApiKey({ apiKey });
     }
 
