@@ -6,7 +6,7 @@ import { DomainModule } from './modules/domain/domain.module';
 
 @Module({
   imports: [
-    configModule({ envSuffix: 'composer-api', configSchema }),
+    configModule({ configSchema }),
     loggerModule({ name: APP_NAME }),
     DomainModule,
   ],

@@ -41,17 +41,14 @@ export const configValidate =
 
 /**
  * Configures the NestJS ConfigModule with the provided options.
- * @param envSuffix The suffix to use for the environment file (e.g. 'production', 'test', etc.).
  * @param configSchema (Optional) A schema to validate the configuration against.
  * @param validate (Optional) A function to validate the configuration.
  * @returns The configured ConfigModule.
  */
 export const configModule = ({
-  envSuffix,
   configSchema,
   validate,
 }: Readonly<{
-  envSuffix: string;
   configSchema?: Record<string, Joi.AnySchema>;
   validate?: (config: Record<string, any>) => Record<string, any>;
 }>) =>
@@ -61,7 +58,7 @@ export const configModule = ({
     // https://docs.nestjs.com/techniques/configuration#schema-validation
     ...(configSchema && { validationSchema: Joi.object(configSchema) }),
     // https://docs.nestjs.com/techniques/configuration#custom-env-file-path
-    envFilePath: __PRODUCTION__ ? [`env-${envSuffix}`, '.env'] : ['.env.development'],
+    envFilePath: __PRODUCTION__ ? ['.env'] : ['.env.development.local', '.env.development'],
     // https://docs.nestjs.com/techniques/configuration#use-module-globally
     // you will not need to import ConfigModule in other modules once it's been loaded in [[AppModule]]
     isGlobal: true,
