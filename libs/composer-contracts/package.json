@@ -1,0 +1,17 @@
+{
+  "name": "@app/composer-contracts",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint src/**/*.ts --fix",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0"
+  },
+  "devDependencies": {
+    "@nestjs/swagger": "^7.1.12",
+    "eslint": "^8.50.0"
+  }
+}

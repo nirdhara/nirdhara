@@ -1,5 +1,5 @@
 import { CustomInternalServerException } from '@app/common-nest/src';
-import { ErrorCode } from 'src/exceptions/error-code.enum';
+import { ErrorCode } from '@app/composer-contracts/src/exceptions/error-code.enum';
 
 /**
  * Reasons
@@ -18,11 +18,12 @@ export class GooglePalmConnectionException extends CustomInternalServerException
  * Reasons
  * - Google PaLM service with incorrect credentials.
  */
-export class GooglePalmInvalidApiKeyException extends CustomInternalServerException<ErrorCode> {
+export class GooglePalmIncorrectApiKeyException extends CustomInternalServerException<ErrorCode> {
   constructor() {
     super({
-      error: 'Invalid API Key provided for Google PaLM',
-      errorCode: ErrorCode.GooglePalmInvalidApiKey,
+      error:
+        'Incorrect API key provided for Google PaLM. You can find your API key at https://makersuite.google.com/app/apikey',
+      errorCode: ErrorCode.GooglePalmIncorrectApiKey,
     });
   }
 }

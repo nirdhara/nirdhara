@@ -162,6 +162,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/composer-contracts@workspace:*, @app/composer-contracts@workspace:libs/composer-contracts":
+  version: 0.0.0-use.local
+  resolution: "@app/composer-contracts@workspace:libs/composer-contracts"
+  dependencies:
+    "@nestjs/swagger": ^7.1.12
+    class-transformer: ^0.5.1
+    class-validator: ^0.14.0
+    eslint: ^8.50.0
+  languageName: unknown
+  linkType: soft
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.22.10, @babel/code-frame@npm:^7.22.5":
   version: 7.22.13
   resolution: "@babel/code-frame@npm:7.22.13"
@@ -1770,7 +1781,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@nirdhara/composer-api@workspace:apps/composer-api"
   dependencies:
+    "@app/common": "workspace:*"
     "@app/common-nest": "workspace:*"
+    "@app/composer-contracts": "workspace:*"
     "@fastify/static": ^6.11.2
     "@nestjs/axios": ^3.0.0
     "@nestjs/cli": ^10.1.18
@@ -1794,6 +1807,7 @@ __metadata:
     jest: ^29.7.0
     joi: ^17.10.2
     nps: ^5.10.0
+    openai: ^4.11.0
     pino-pretty: ^10.2.0
     prettier: ^3.0.3
     reflect-metadata: ^0.1.13
@@ -12139,6 +12153,24 @@ __metadata:
     is-inside-container: ^1.0.0
     is-wsl: ^2.2.0
   checksum: 3993c0f61d51fed8ac290e99c9c3cf45d3b6cfb3e2aa2b74cafd312c3486c22fd81df16ac8f3ab91dd8a4e3e729a16fc2480cfc406c4833416cf908acf1ae7c9
+  languageName: node
+  linkType: hard
+
+"openai@npm:^4.11.0":
+  version: 4.11.0
+  resolution: "openai@npm:4.11.0"
+  dependencies:
+    "@types/node": ^18.11.18
+    "@types/node-fetch": ^2.6.4
+    abort-controller: ^3.0.0
+    agentkeepalive: ^4.2.1
+    digest-fetch: ^1.3.0
+    form-data-encoder: 1.7.2
+    formdata-node: ^4.3.2
+    node-fetch: ^2.6.7
+  bin:
+    openai: bin/cli
+  checksum: 4a2609b29d47347f6c4ed03c35787baaa7145b34e57aecbf6b5412f4ac0479e9c46b5ce22d85a972604eef4c0933d8a09c46c2625de8fdad2bd53200888bb04a
   languageName: node
   linkType: hard
 

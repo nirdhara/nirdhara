@@ -20,5 +20,9 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
-  "references": [{ "path": "../../libs/common-nest" }]
+  "references": [
+    { "path": "../../libs/common" },
+    { "path": "../../libs/common-nest" },
+    { "path": "../../libs/composer-contracts" }
+  ]
 }
