@@ -582,13 +582,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^17.7.1":
-  version: 17.7.1
-  resolution: "@commitlint/cli@npm:17.7.1"
+"@commitlint/cli@npm:^17.7.2":
+  version: 17.7.2
+  resolution: "@commitlint/cli@npm:17.7.2"
   dependencies:
     "@commitlint/format": ^17.4.4
     "@commitlint/lint": ^17.7.0
-    "@commitlint/load": ^17.7.1
+    "@commitlint/load": ^17.7.2
     "@commitlint/read": ^17.5.1
     "@commitlint/types": ^17.4.4
     execa: ^5.0.0
@@ -598,7 +598,7 @@ __metadata:
     yargs: ^17.0.0
   bin:
     commitlint: cli.js
-  checksum: 2500a50514ab0629d3661d74e6f759f0b9b56c1992fbc101bb78a67033c6ed02a6dad3ae728f91f1f9b3034ae17e3808835957f885ab7129a421085d31f6cb23
+  checksum: 7d5d86b27980135713094e44023ee7a6cc2bb1cd015f92111857e069a3127dab63d4575b507bdac2e16255aaab65da908d1f7667e8aa9de7e032d9c464ef3154
   languageName: node
   linkType: hard
 
@@ -674,7 +674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:>6.1.1, @commitlint/load@npm:^17.7.1":
+"@commitlint/load@npm:>6.1.1":
   version: 17.7.1
   resolution: "@commitlint/load@npm:17.7.1"
   dependencies:
@@ -693,6 +693,28 @@ __metadata:
     ts-node: ^10.8.1
     typescript: ^4.6.4 || ^5.0.0
   checksum: 8d0e56b49a0e4dec7e8e28a2c6bc7ce985e6b8e10274aa20d0e3f6c2465fc9082d18f91bbe5c336594ebabcc4dc9668fdeaa039ef5bbfaf26ca0be423461ef61
+  languageName: node
+  linkType: hard
+
+"@commitlint/load@npm:^17.7.2":
+  version: 17.7.2
+  resolution: "@commitlint/load@npm:17.7.2"
+  dependencies:
+    "@commitlint/config-validator": ^17.6.7
+    "@commitlint/execute-rule": ^17.4.0
+    "@commitlint/resolve-extends": ^17.6.7
+    "@commitlint/types": ^17.4.4
+    "@types/node": 20.5.1
+    chalk: ^4.1.0
+    cosmiconfig: ^8.0.0
+    cosmiconfig-typescript-loader: ^4.0.0
+    lodash.isplainobject: ^4.0.6
+    lodash.merge: ^4.6.2
+    lodash.uniq: ^4.5.0
+    resolve-from: ^5.0.0
+    ts-node: ^10.8.1
+    typescript: ^4.6.4 || ^5.0.0
+  checksum: dda9f7efd6413309266617a5ee026df65cc8c590b86c312f5905285fcbef5ae3ec983694c145007d89402c9f728882465f016167b156f43f6ed414c3b8ca079a
   languageName: node
   linkType: hard
 
@@ -1794,7 +1816,7 @@ __metadata:
     "@nestjs/swagger": ^7.1.12
     "@nestjs/testing": ^10.2.6
     "@types/jest": ^29.5.5
-    "@types/node": ^20.7.0
+    "@types/node": ^20.8.0
     "@types/supertest": ^2.0.13
     "@typescript-eslint/eslint-plugin": ^6.7.3
     "@typescript-eslint/parser": ^6.7.3
@@ -1828,9 +1850,9 @@ __metadata:
   dependencies:
     "@app/common": "workspace:*"
     "@types/eslint": ^8.44.3
-    "@types/node": 20.7.0
+    "@types/node": 20.8.0
     "@types/react": 18.2.23
-    "@types/react-dom": 18.2.7
+    "@types/react-dom": 18.2.8
     autoprefixer: ^10.4.16
     axios: ^1.5.1
     eslint: 8.50.0
@@ -1839,7 +1861,7 @@ __metadata:
     mobx-react: ^9.0.1
     next: 13.5.3
     nps: ^5.10.0
-    postcss: ^8.4.30
+    postcss: ^8.4.31
     react: 18.2.0
     react-dom: 18.2.0
     reactflow: ^11.9.2
@@ -1865,7 +1887,7 @@ __metadata:
     "@nestjs/swagger": ^7.1.12
     "@nestjs/testing": ^10.2.6
     "@types/jest": ^29.5.5
-    "@types/node": ^20.7.0
+    "@types/node": ^20.8.0
     "@types/supertest": ^2.0.13
     "@typescript-eslint/eslint-plugin": ^6.7.3
     "@typescript-eslint/parser": ^6.7.3
@@ -1878,7 +1900,7 @@ __metadata:
     google-auth-library: ^9.0.0
     jest: ^29.7.0
     joi: ^17.10.2
-    langchain: ^0.0.154
+    langchain: ^0.0.156
     nps: ^5.10.0
     pino-pretty: ^10.2.0
     prettier: ^3.0.3
@@ -3228,10 +3250,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.7.0, @types/node@npm:^20.7.0":
-  version: 20.7.0
-  resolution: "@types/node@npm:20.7.0"
-  checksum: 1b2919925c213f4d2039ada7a8354c998e144f7291db8d719ef58ea9924ab636c113690073b0ec3b82ba62907385f7e0f51e9d1583c1a818776daa5156d3a590
+"@types/node@npm:20.5.1":
+  version: 20.5.1
+  resolution: "@types/node@npm:20.5.1"
+  checksum: 3dbe611cd67afa987102c8558ee70f848949c5dcfee5f60abc073e55c0d7b048e391bf06bb1e0dc052cb7210ca97136ac496cbaf6e89123c989de6bd125fde82
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.8.0, @types/node@npm:^20.8.0":
+  version: 20.8.0
+  resolution: "@types/node@npm:20.8.0"
+  checksum: ebad6342d54238a24bf980d7750117a5d67749c9b72cbb7a974a1e932c39034aa3a810d669e007e8a5071782a253aa069a187b614407a382403c9826e837c849
   languageName: node
   linkType: hard
 
@@ -3270,12 +3299,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.2.7":
-  version: 18.2.7
-  resolution: "@types/react-dom@npm:18.2.7"
+"@types/react-dom@npm:18.2.8":
+  version: 18.2.8
+  resolution: "@types/react-dom@npm:18.2.8"
   dependencies:
     "@types/react": "*"
-  checksum: e02ea908289a7ad26053308248d2b87f6aeafd73d0e2de2a3d435947bcea0422599016ffd1c3e38ff36c42f5e1c87c7417f05b0a157e48649e4a02f21727d54f
+  checksum: d36264631028d021b73cd9e015f10b95c4959ae1ce8f7a7419f318d1f05b1d063e6afffcd2a349a6bccd64ccc9ee9d2d976e1f0437643f0e7db621fa035bca65
   languageName: node
   linkType: hard
 
@@ -9926,9 +9955,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"langchain@npm:^0.0.154":
-  version: 0.0.154
-  resolution: "langchain@npm:0.0.154"
+"langchain@npm:^0.0.156":
+  version: 0.0.156
+  resolution: "langchain@npm:0.0.156"
   dependencies:
     "@anthropic-ai/sdk": ^0.6.2
     ansi-styles: ^5.0.0
@@ -9961,11 +9990,9 @@ __metadata:
     "@aws-sdk/client-sagemaker-runtime": ^3.310.0
     "@aws-sdk/client-sfn": ^3.310.0
     "@aws-sdk/credential-provider-node": ^3.388.0
-    "@aws-sdk/protocol-http": ^3.374.0
-    "@aws-sdk/signature-v4": ^3.374.0
     "@azure/storage-blob": ^12.15.0
     "@clickhouse/client": ^0.0.14
-    "@cloudflare/workers-types": ^4.20230904.0
+    "@cloudflare/ai": ^1.0.12
     "@elastic/elasticsearch": ^8.4.0
     "@getmetal/metal-sdk": "*"
     "@getzep/zep-js": ^0.7.0
@@ -9981,6 +10008,8 @@ __metadata:
     "@qdrant/js-client-rest": ^1.2.0
     "@raycast/api": ^1.55.2
     "@smithy/eventstream-codec": ^2.0.5
+    "@smithy/protocol-http": ^3.0.6
+    "@smithy/signature-v4": ^2.0.10
     "@smithy/util-utf8": ^2.0.0
     "@supabase/postgrest-js": ^1.1.1
     "@supabase/supabase-js": ^2.10.0
@@ -9988,6 +10017,7 @@ __metadata:
     "@tensorflow/tfjs-converter": "*"
     "@tensorflow/tfjs-core": "*"
     "@upstash/redis": ^1.20.6
+    "@vercel/postgres": ^0.5.0
     "@writerai/writer-sdk": ^0.40.2
     "@xata.io/client": ^0.25.1
     "@xenova/transformers": ^2.5.4
@@ -10051,15 +10081,11 @@ __metadata:
       optional: true
     "@aws-sdk/credential-provider-node":
       optional: true
-    "@aws-sdk/protocol-http":
-      optional: true
-    "@aws-sdk/signature-v4":
-      optional: true
     "@azure/storage-blob":
       optional: true
     "@clickhouse/client":
       optional: true
-    "@cloudflare/workers-types":
+    "@cloudflare/ai":
       optional: true
     "@elastic/elasticsearch":
       optional: true
@@ -10091,6 +10117,10 @@ __metadata:
       optional: true
     "@smithy/eventstream-codec":
       optional: true
+    "@smithy/protocol-http":
+      optional: true
+    "@smithy/signature-v4":
+      optional: true
     "@smithy/util-utf8":
       optional: true
     "@supabase/postgrest-js":
@@ -10104,6 +10134,8 @@ __metadata:
     "@tensorflow/tfjs-core":
       optional: true
     "@upstash/redis":
+      optional: true
+    "@vercel/postgres":
       optional: true
     "@writerai/writer-sdk":
       optional: true
@@ -10197,7 +10229,7 @@ __metadata:
       optional: true
     youtubei.js:
       optional: true
-  checksum: ceee004f9094928700c69040b69a212731f57d44a35b56f2058292f17536152229944090bf5569d88620a9c58f13e66745cb2aea3d1ceb2033fa09cd040bfee9
+  checksum: fdc4b0f31b19c276f7b7400ae9a09ab58b6d00ae49003d03e28a395151e942748dd2bcc2613c2b0486d23cf79b2066b1aa35e001f9107a5336461de6771f4960
   languageName: node
   linkType: hard
 
@@ -11450,10 +11482,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nirdhara@workspace:."
   dependencies:
-    "@commitlint/cli": ^17.7.1
+    "@commitlint/cli": ^17.7.2
     "@commitlint/config-conventional": ^17.7.0
     "@gowravshekar/nps-utils": ^2.0.0
-    "@types/node": ^20.7.0
+    "@types/node": ^20.8.0
     "@typescript-eslint/eslint-plugin": ^6.7.3
     "@typescript-eslint/parser": ^6.7.3
     bestzip: ^2.2.1
@@ -12872,14 +12904,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.30":
-  version: 8.4.30
-  resolution: "postcss@npm:8.4.30"
+"postcss@npm:^8.4.31":
+  version: 8.4.31
+  resolution: "postcss@npm:8.4.31"
   dependencies:
     nanoid: ^3.3.6
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 6c810c10c9bd3e03ca016e0b6b6756261e640aba1a9a7b1200b55502bc34b9165e38f590aef3493afc2f30ab55cdfcd43fd0f8408d69a77318ddbcf2a8ad164b
+  checksum: 1d8611341b073143ad90486fcdfeab49edd243377b1f51834dc4f6d028e82ce5190e4f11bb2633276864503654fb7cab28e67abdc0fbf9d1f88cad4a0ff0beea
   languageName: node
   linkType: hard
 
