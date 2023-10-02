@@ -1850,7 +1850,7 @@ __metadata:
   dependencies:
     "@app/common": "workspace:*"
     "@types/eslint": ^8.44.3
-    "@types/node": 20.8.0
+    "@types/node": 20.8.1
     "@types/react": 18.2.24
     "@types/react-dom": 18.2.8
     autoprefixer: ^10.4.16
@@ -3257,10 +3257,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.8.0, @types/node@npm:^20.8.0":
-  version: 20.8.0
-  resolution: "@types/node@npm:20.8.0"
-  checksum: ebad6342d54238a24bf980d7750117a5d67749c9b72cbb7a974a1e932c39034aa3a810d669e007e8a5071782a253aa069a187b614407a382403c9826e837c849
+"@types/node@npm:20.8.1":
+  version: 20.8.1
+  resolution: "@types/node@npm:20.8.1"
+  checksum: 2ae18915c44899766c5725d41a53f7519db7e16bdc70e558b906017b402ea03e641e5e2fb4a1204825f415570d2312dcaeb4c4e8667763a96ec1e227ba18bb87
   languageName: node
   linkType: hard
 
@@ -3275,6 +3275,13 @@ __metadata:
   version: 18.18.0
   resolution: "@types/node@npm:18.18.0"
   checksum: 61bcffa28eb713e7a4c66fd369df603369c3f834a783faeced95fe3e78903faa25f1a704d49e054f41d71b7915eeb066d10a37cc699421fcf5dd267f96ad5808
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.8.0":
+  version: 20.8.0
+  resolution: "@types/node@npm:20.8.0"
+  checksum: ebad6342d54238a24bf980d7750117a5d67749c9b72cbb7a974a1e932c39034aa3a810d669e007e8a5071782a253aa069a187b614407a382403c9826e837c849
   languageName: node
   linkType: hard
 
