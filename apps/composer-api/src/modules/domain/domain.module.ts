@@ -1,9 +1,9 @@
 import { RootModule } from '@app/common-nest/src';
 import { Module } from '@nestjs/common';
-import { ApiProviderModule } from './api-provider/api-provider.module';
+import { CredentialModule } from './credential/credential.module';
 
 @Module({
-  imports: [RootModule, ApiProviderModule],
+  imports: [RootModule, CredentialModule],
   providers: [],
 })
 export class DomainModule {}

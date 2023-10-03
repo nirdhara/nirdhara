@@ -1,22 +1,22 @@
 import {
   AddApiKeyForm,
   AddApiKeyResult,
-} from '@app/composer-contracts/src/domain/api-provider/api-provider.entity';
+} from '@app/composer-contracts/src/domain/credential/credential.entity';
 import { Body, Controller, Post } from '@nestjs/common';
 import { HttpStatus } from '@nestjs/common/enums';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Observable } from 'rxjs/internal/Observable';
-import { ApiProviderService } from './api-provider.service';
+import { CredentialService } from './credential.service';
 
-@ApiTags('API Keys')
-@Controller('api-provider')
-export class ApiProviderController {
-  constructor(private readonly service: ApiProviderService) {}
+@ApiTags('Credential')
+@Controller('credential')
+export class CredentialController {
+  constructor(private readonly service: CredentialService) {}
 
-  @Post('/api-key')
+  @Post()
   @ApiOperation({
     summary:
-      'Add a new API key from a Large Language Model or other API Provider',
+      'Add a new credential from a Large Language Model or other API Provider',
   })
   @ApiResponse({
     status: HttpStatus.OK,
