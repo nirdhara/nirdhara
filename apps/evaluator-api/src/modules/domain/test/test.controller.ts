@@ -1,13 +1,17 @@
 import { Controller, Get } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { ApiTags } from '@nestjs/swagger';
-import { GooglePaLM } from 'langchain/llms/googlepalm';
+import { initializeAgentExecutorWithOptions } from 'langchain/agents';
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
+import { GooglePaLM } from 'langchain/llms/googlepalm';
+import { OpenAI } from 'langchain/llms/openai';
 import {
-  SemanticSimilarityExampleSelector,
-  PromptTemplate,
   FewShotPromptTemplate,
+  PromptTemplate,
+  SemanticSimilarityExampleSelector,
 } from 'langchain/prompts';
+import { DynamicTool, SerpAPI } from 'langchain/tools';
+import { Calculator } from 'langchain/tools/calculator';
 import { HNSWLib } from 'langchain/vectorstores/hnswlib';
 
 @ApiTags('Test')
@@ -93,5 +97,42 @@ export class TestController {
        */
     };
     return run();
+  }
+
+  @Get('3')
+  async test3() {
+    const model = new OpenAI({
+      openAIApiKey: this.config.get('OPENAI_API_KEY'),
+      temperature: 0,
+      verbose: true,
+    });
+    const tools = [
+      new DynamicTool({
+        name: 'SetClock',
+        description: 'call this to set the clock',
+        func: async () => 'Clock has been set to 12 AM',
+      }),
+      new DynamicTool({
+        name: 'Acknowledge',
+        description: 'call this to acknowledge the creators',
+        func: async () => 'Nirdhara',
+      }),
+      new Calculator(),
+      new SerpAPI(this.config.get('SERPAPI_API_KEY')),
+    ];
+
+    const executor = await initializeAgentExecutorWithOptions(tools, model, {
+      agentType: 'zero-shot-react-description',
+    });
+
+    console.log('Loaded agent.');
+
+    const input = `What is today's date?`;
+
+    console.log(`Executing with input "${input}"...`);
+
+    const result = await executor.call({ input });
+
+    console.log(`${result.output}`);
   }
 }
