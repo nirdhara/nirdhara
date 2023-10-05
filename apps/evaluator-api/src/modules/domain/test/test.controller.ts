@@ -110,12 +110,12 @@ export class TestController {
       new DynamicTool({
         name: 'SetClock',
         description: 'call this to set the clock',
-        func: async () => 'Clock has been set to 12 AM',
+        func: () => Promise.resolve('Clock has been set to 12 AM'),
       }),
       new DynamicTool({
         name: 'Acknowledge',
         description: 'call this to acknowledge the creators',
-        func: async () => 'Nirdhara',
+        func: () => Promise.resolve('Nirdhara'),
       }),
       new Calculator(),
       new SerpAPI(this.config.get('SERPAPI_API_KEY')),
