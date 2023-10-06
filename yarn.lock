@@ -1865,7 +1865,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     reactflow: ^11.9.2
-    sass: ^1.68.0
+    sass: ^1.69.0
     tailwindcss: ^3.3.3
     typescript: 5.2.2
   languageName: unknown
@@ -1901,7 +1901,7 @@ __metadata:
     hnswlib-node: ^2.0.0
     jest: ^29.7.0
     joi: ^17.11.0
-    langchain: ^0.0.160
+    langchain: ^0.0.161
     nps: ^5.10.0
     pino-pretty: ^10.2.3
     prettier: ^3.0.3
@@ -9998,9 +9998,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"langchain@npm:^0.0.160":
-  version: 0.0.160
-  resolution: "langchain@npm:0.0.160"
+"langchain@npm:^0.0.161":
+  version: 0.0.161
+  resolution: "langchain@npm:0.0.161"
   dependencies:
     "@anthropic-ai/sdk": ^0.6.2
     ansi-styles: ^5.0.0
@@ -10026,6 +10026,7 @@ __metadata:
     zod-to-json-schema: ^3.20.4
   peerDependencies:
     "@aws-crypto/sha256-js": ^5.0.0
+    "@aws-sdk/client-bedrock-runtime": ^3.422.0
     "@aws-sdk/client-dynamodb": ^3.310.0
     "@aws-sdk/client-kendra": ^3.352.0
     "@aws-sdk/client-lambda": ^3.310.0
@@ -10111,6 +10112,8 @@ __metadata:
     youtubei.js: ^5.8.0
   peerDependenciesMeta:
     "@aws-crypto/sha256-js":
+      optional: true
+    "@aws-sdk/client-bedrock-runtime":
       optional: true
     "@aws-sdk/client-dynamodb":
       optional: true
@@ -10278,7 +10281,7 @@ __metadata:
       optional: true
     youtubei.js:
       optional: true
-  checksum: d46a640aa5a275281ef9e0a5cd76dffc772a82c082771f0e05e894ffeeb3fc508794051e6aeb01c3f49e201202c6be06f7a4efb8a2270c7070a33da1420cf296
+  checksum: eb2b48f2dcc0ade1437500a266bdfb40e5b13014eedfee2fae117a389b1744db0153b8142213b0718ba5eaec0a6f0da1f4a785f93e906bc5a5cdc5ab3f422216
   languageName: node
   linkType: hard
 
@@ -13887,16 +13890,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.68.0":
-  version: 1.68.0
-  resolution: "sass@npm:1.68.0"
+"sass@npm:^1.69.0":
+  version: 1.69.0
+  resolution: "sass@npm:1.69.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 65ccede83c96768beeb8dcaf67957b7c76b12ff1276bfd2849d7be151d46ba1400048a67717e6e5e4969bc75e87348e5530f5f272833f2e60a891c21a33d8ab0
+  checksum: eabea31ea3b1dd529c7eff345c8b6468afe6ab8011bd4f95caa2cffb8fb115cc055ea21de425be6197f7ed22516f5652eccb98d315d592ea152ada553f964b8a
   languageName: node
   linkType: hard
 

@@ -28,7 +28,7 @@
     "google-auth-library": "^9.1.0",
     "hnswlib-node": "^2.0.0",
     "joi": "^17.11.0",
-    "langchain": "^0.0.160",
+    "langchain": "^0.0.161",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
