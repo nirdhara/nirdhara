@@ -12,6 +12,6 @@
   },
   "devDependencies": {
     "@nestjs/swagger": "^7.1.13",
-    "eslint": "^8.50.0"
+    "eslint": "^8.51.0"
   }
 }
