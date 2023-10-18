@@ -26,7 +26,6 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "google-auth-library": "^9.1.0",
-    "hnswlib-node": "^2.0.0",
     "joi": "^17.11.0",
     "langchain": "^0.0.168",
     "reflect-metadata": "^0.1.13",
