@@ -1,7 +1,22 @@
 'use client';
+import { useEffect } from 'react';
 
-const GlobalError = () => {
-  return <>This is global server error</>;
-};
+/**
+ *
+ * Global Error Boundary: A "catch-all" error handler for root layout and template which wraps the entire application.
+ *
+ */
+export default function GlobalError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  useEffect(() => {
+    console.log(error);
+  }, [error]);
 
-export default GlobalError;
+  return (
+    <html>
+      <body>
+        <h2>Something went wrong!</h2>
+        <button onClick={reset}>Try again</button>
+      </body>
+    </html>
+  );
+}
