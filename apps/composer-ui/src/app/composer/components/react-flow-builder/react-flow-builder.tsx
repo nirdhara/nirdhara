@@ -17,12 +17,10 @@ const nodes: any = [
 
 const OverviewFlow = () => {
   return (
-    <div style={{ height: 800 }}>
-      <ReactFlow nodes={nodes}>
-        <Background />
-        <Controls />
-      </ReactFlow>
-    </div>
+    <ReactFlow nodes={nodes}>
+      <Background />
+      <Controls />
+    </ReactFlow>
   );
 };
 
