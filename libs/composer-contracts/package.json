@@ -11,7 +11,7 @@
     "class-validator": "^0.14.0"
   },
   "devDependencies": {
-    "@nestjs/swagger": "^7.1.13",
+    "@nestjs/swagger": "^7.1.14",
     "eslint": "^8.52.0"
   }
 }
