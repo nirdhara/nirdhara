@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@app/common": "workspace:*",
-    "axios": "^1.5.1",
+    "axios": "^1.6.0",
     "mobx": "^6.10.2",
     "mobx-react": "^9.0.1",
-    "next": "13.5.6",
+    "next": "14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "reactflow": "^11.9.4"
@@ -23,11 +23,11 @@
   "devDependencies": {
     "@types/eslint": "^8.44.6",
     "@types/node": "20.8.9",
-    "@types/react": "18.2.32",
+    "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
     "autoprefixer": "^10.4.16",
     "eslint": "8.52.0",
-    "eslint-config-next": "13.5.6",
+    "eslint-config-next": "14.0.0",
     "nps": "^5.10.0",
     "postcss": "^8.4.31",
     "sass": "^1.69.5",

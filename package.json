@@ -17,7 +17,7 @@
   },
   "packageManager": "yarn@3.6.1",
   "devDependencies": {
-    "@commitlint/cli": "^18.1.0",
+    "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
     "@gowravshekar/nps-utils": "^2.0.0",
     "@types/node": "^20.8.9",
@@ -36,7 +36,7 @@
     "eslint-plugin-unicorn": "^48.0.1",
     "git-revision-webpack-plugin": "^5.0.0",
     "husky": "^8.0.3",
-    "lerna": "^7.4.1",
+    "lerna": "^7.4.2",
     "lint-staged": "^15.0.2",
     "nx": "17.0.2",
     "prettier": "^3.0.3",
