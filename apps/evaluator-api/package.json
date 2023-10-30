@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@app/common-nest": "workspace:*",
-    "@fastify/static": "^6.11.2",
+    "@fastify/static": "^6.12.0",
     "@google-ai/generativelanguage": "^1.1.0",
     "@nestjs/common": "^10.2.7",
     "@nestjs/config": "^3.1.1",
@@ -27,13 +27,13 @@
     "class-validator": "^0.14.0",
     "google-auth-library": "^9.2.0",
     "joi": "^17.11.0",
-    "langchain": "^0.0.174",
+    "langchain": "^0.0.175",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "@nestjs/cli": "^10.2.0",
-    "@nestjs/schematics": "^10.0.2",
+    "@nestjs/cli": "^10.2.1",
+    "@nestjs/schematics": "^10.0.3",
     "@nestjs/testing": "^10.2.7",
     "@types/jest": "^29.5.6",
     "@types/node": "^20.8.9",
