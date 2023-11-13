@@ -11658,8 +11658,8 @@ __metadata:
   linkType: hard
 
 "mobx-react@npm:^9.0.2":
-  version: 9.0.2
-  resolution: "mobx-react@npm:9.0.2"
+  version: 9.1.0
+  resolution: "mobx-react@npm:9.1.0"
   dependencies:
     mobx-react-lite: ^4.0.4
   peerDependencies:
@@ -11670,7 +11670,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 8a32afc0e5b61fb5ef2033843affd4cbc87302e31f44e52d6dbf0eace97c719f1b63c0557dd701559ddb40f8058d3dcf579bfb3edc3f14bf2d17dabc90fe3b35
+  checksum: f6de771d7df6da30548081a1718d12a1c24912e9e0d9e6c3b4fed6299d07145ace10a4a44eccb28d8c58b054f63ccce72e555c9c13c4f420b362d214fa83e23d
   languageName: node
   linkType: hard
 
