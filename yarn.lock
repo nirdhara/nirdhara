@@ -11675,9 +11675,9 @@ __metadata:
   linkType: hard
 
 "mobx@npm:^6.10.2":
-  version: 6.10.2
-  resolution: "mobx@npm:6.10.2"
-  checksum: 14d6f1db4e3a61c823510ea130229c96bd4958b77d81057ac1abc6a439703eaf3ea2289192ef205b4250d3adb1d83a439ad56d5e53f2b967c6e62a6bccc23d8a
+  version: 6.11.0
+  resolution: "mobx@npm:6.11.0"
+  checksum: d6decf113449bb02000e443dc61538cab992fda5aa56582bbd6178b8d85150550cc6c656dcf582fe756be7d88e025e16f19e3dd98df55fef1288ec4d4998da45
   languageName: node
   linkType: hard
 
