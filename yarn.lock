@@ -965,13 +965,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/cors@npm:8.4.0":
-  version: 8.4.0
-  resolution: "@fastify/cors@npm:8.4.0"
+"@fastify/cors@npm:8.4.1":
+  version: 8.4.1
+  resolution: "@fastify/cors@npm:8.4.1"
   dependencies:
     fastify-plugin: ^4.0.0
     mnemonist: 0.39.5
-  checksum: 4fe99623918b9c58f6590dac00fe778f2755eacc47de726acf97b3a3305a414425b393422429efca1b261514100f4092a4ad41bc549c6f6edf60e83f9f5d3701
+  checksum: 515583525cb48589be20cc98d2ebbf0ebf767bab39a50d575e51a07a95e6d0170d7965448f7e60155ef69d7381334e143f025b0607368187d362c6d3da01fd07
   languageName: node
   linkType: hard
 
@@ -1738,10 +1738,10 @@ __metadata:
   linkType: hard
 
 "@nestjs/platform-fastify@npm:^10.2.8":
-  version: 10.2.8
-  resolution: "@nestjs/platform-fastify@npm:10.2.8"
+  version: 10.2.10
+  resolution: "@nestjs/platform-fastify@npm:10.2.10"
   dependencies:
-    "@fastify/cors": 8.4.0
+    "@fastify/cors": 8.4.1
     "@fastify/formbody": 7.4.0
     "@fastify/middie": 8.3.0
     fastify: 4.24.3
@@ -1758,7 +1758,7 @@ __metadata:
       optional: true
     "@fastify/view":
       optional: true
-  checksum: c0a5b83f328c2c16079d831e78ba7a9ee9533ca44843a6f0df723d2eafd80a572c5f82db51439885460f1dcd8ce6941c317b3b321db1e0722b22486487a60fff
+  checksum: acfd1d0cfa446a97fbe07a220c03b2548775ac1110aeb7b8506cf745180cee114d013a06d046ced65de2c6beb16db738a6636fbb671222e1fb179a34440110fe
   languageName: node
   linkType: hard
 
