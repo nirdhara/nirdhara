@@ -2701,6 +2701,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sentry-internal/tracing@npm:7.92.0":
+  version: 7.92.0
+  resolution: "@sentry-internal/tracing@npm:7.92.0"
+  dependencies:
+    "@sentry/core": 7.92.0
+    "@sentry/types": 7.92.0
+    "@sentry/utils": 7.92.0
+  checksum: 2daa6916d6a57bbab33c993a1c6a306525772c4fc16c08a5287327c0fef4c2f7120cca3d353f669d4dceb0e95dc4bb72a2b53fde63979a7793a0527dfe7fecd4
+  languageName: node
+  linkType: hard
+
 "@sentry/core@npm:7.80.1":
   version: 7.80.1
   resolution: "@sentry/core@npm:7.80.1"
@@ -2711,16 +2722,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:^7.80.1":
-  version: 7.80.1
-  resolution: "@sentry/node@npm:7.80.1"
+"@sentry/core@npm:7.92.0":
+  version: 7.92.0
+  resolution: "@sentry/core@npm:7.92.0"
   dependencies:
-    "@sentry-internal/tracing": 7.80.1
-    "@sentry/core": 7.80.1
-    "@sentry/types": 7.80.1
-    "@sentry/utils": 7.80.1
+    "@sentry/types": 7.92.0
+    "@sentry/utils": 7.92.0
+  checksum: 9db7454c64f672981d95f0cc061297cccd02c208c212c54ef7e1a1d7612e8e87a8bb1bbc51eadda919c01dac9c6f4ae5ad97e4ec7874528e2e4b5cb9d553a21f
+  languageName: node
+  linkType: hard
+
+"@sentry/node@npm:^7.80.1":
+  version: 7.92.0
+  resolution: "@sentry/node@npm:7.92.0"
+  dependencies:
+    "@sentry-internal/tracing": 7.92.0
+    "@sentry/core": 7.92.0
+    "@sentry/types": 7.92.0
+    "@sentry/utils": 7.92.0
     https-proxy-agent: ^5.0.0
-  checksum: e8e747c3709171fa79f6ebf5546ef0c676c3114657c047bf4f1f8f1d4c9b950a55fe3f4ac7ba8e750162817823e6f38b1d79036153faaaf58526545d40fc1bc4
+  checksum: 77efdd0c3c0f868879e5f906975ecec226f5379f9e5426b99e1b5133c006760dc9a3a36a0bd757d8e0c392440fd443567380117b3fa7fbf466ca91293d051f56
   languageName: node
   linkType: hard
 
@@ -2740,12 +2761,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sentry/types@npm:7.92.0":
+  version: 7.92.0
+  resolution: "@sentry/types@npm:7.92.0"
+  checksum: 0dac88acf76aeb905f68b180717ec03451922fea6ddb7a0d1af1d55e658e8e9d0b1d696f1d6eecbbb99f372c8cc622165bd24d5059a1ffb14fe7172cdbb57306
+  languageName: node
+  linkType: hard
+
 "@sentry/utils@npm:7.80.1":
   version: 7.80.1
   resolution: "@sentry/utils@npm:7.80.1"
   dependencies:
     "@sentry/types": 7.80.1
   checksum: ed28be55e1348811725e611d39928d3802fc1637118adec5e6d359af0c1bb0d20dce49b3e7c013a06687d0b35db5ca63b2280b028776b2fced672fb1d429a969
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:7.92.0":
+  version: 7.92.0
+  resolution: "@sentry/utils@npm:7.92.0"
+  dependencies:
+    "@sentry/types": 7.92.0
+  checksum: 358dd7f31558f0367e38e69f0b24e9b25d02e6ae15b8c5841b8ed4b55eaf6ba311449f283aec9887a6275cc191d3f6083209e8de31e50ab0a4f06e3015c1ccd3
   languageName: node
   linkType: hard
 
